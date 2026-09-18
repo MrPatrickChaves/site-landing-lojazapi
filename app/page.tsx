@@ -71,6 +71,13 @@ const additions = [
   ["/landing-assets/icon-doc.png", "Checkout online", "Receba pagamentos online.", "Consulte"],
 ];
 
+const heroProducts = [
+  { name: "Tênis Verde", price: "R$ 89,90", image: "/landing-assets/hero-product-sneaker.png" },
+  { name: "Bolsa Casual", price: "R$ 74,50", image: "/landing-assets/hero-product-bag.png" },
+  { name: "Garrafa Térmica", price: "R$ 39,90", image: "/landing-assets/hero-product-bottle.png" },
+  { name: "Camisa LojaZapi", price: "R$ 49,90", image: "/landing-assets/hero-product-shirt.png" },
+];
+
 export default function Home() {
   return (
     <>
@@ -131,53 +138,29 @@ export default function Home() {
                 <label className="search-demo">Buscar produtos...</label>
                 <div className="demo-tabs">
                   <span>Todos</span>
-                  <span>Bebidas</span>
-                  <span>Snacks</span>
-                  <span>Limpeza</span>
+                  <span>Moda</span>
+                  <span>Acessórios</span>
+                  <span>Brindes</span>
                 </div>
                 <div className="phone-products">
-                  {["Coca-Cola", "Doritos", "Água Mineral", "Pão de Forma"].map((item, index) => (
-                    <article key={item}>
-                      <div className={`product-blob product-blob-${index}`} />
-                      <strong>{item}</strong>
-                      <small>R$ {(3 + index * 1.45).toFixed(2).replace(".", ",")}</small>
+                  {heroProducts.map((item) => (
+                    <article key={item.name}>
+                      <div className="product-photo">
+                        <img src={item.image} alt="" loading="eager" />
+                      </div>
+                      <strong>{item.name}</strong>
+                      <small>{item.price}</small>
                       <button type="button">+</button>
                     </article>
                   ))}
                 </div>
-                <div className="phone-checkout">Ver carrinho (2) R$ 14,50</div>
+                <div className="phone-checkout">Ver carrinho (2) R$ 164,40</div>
               </div>
 
-              <div className="dashboard-mock">
-                <div className="dash-sidebar">
-                  <strong>LojaZapi</strong>
-                  <span>Início</span>
-                  <span>Pedidos</span>
-                  <span>Produtos</span>
-                  <span>Clientes</span>
-                  <span>Relatórios</span>
-                </div>
-                <div className="dash-content">
-                  <div className="dash-title">
-                    <strong>Pedidos</strong>
-                    <span>02</span>
-                  </div>
-                  {[
-                    ["#1024", "João Silva", "R$ 14,50", "Pendente"],
-                    ["#1023", "Maria Souza", "R$ 28,90", "Separação"],
-                    ["#1022", "Carlos Lima", "R$ 18,50", "Concluído"],
-                  ].map((order) => (
-                    <div className="order-row" key={order[0]}>
-                      <span>{order[0]}</span>
-                      <span>{order[1]}</span>
-                      <span>{order[2]}</span>
-                      <b>{order[3]}</b>
-                    </div>
-                  ))}
-                </div>
+              <div className="notebook-asset" aria-hidden="true">
+                <Image src="/landing-assets/notebook-header.png" width={520} height={413} alt="" priority />
               </div>
 
-              <div className="whatsapp-note">Novos pedidos direto no WhatsApp</div>
               <div className="hero-hand-note top">Do seu catálogo ao pedido no WhatsApp em poucos cliques!</div>
               <div className="hero-hand-note bottom">Mais vendas para o seu negócio!</div>
               <div className="hero-whatsapp-badge">☏</div>
@@ -299,9 +282,9 @@ export default function Home() {
             </a>
             <Image
               className="final-asset"
-              src="/landing-assets/whatsapp-cta-strip.png"
-              width={1086}
-              height={362}
+              src="/landing-assets/banner-footer.png"
+              width={2032}
+              height={258}
               alt=""
             />
           </div>
