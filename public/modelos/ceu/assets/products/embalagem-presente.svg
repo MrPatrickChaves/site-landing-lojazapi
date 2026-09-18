@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Embalagem Presente">
+<defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#ecfff5"/><stop offset="100%" stop-color="#ffffff"/></linearGradient></defs>
+<rect width="900" height="700" fill="url(#g)"/>
+<g opacity="0.95"><ellipse cx="210" cy="170" rx="100" ry="42" fill="#fff"/><ellipse cx="270" cy="148" rx="78" ry="34" fill="#fff"/><ellipse cx="330" cy="173" rx="92" ry="38" fill="#fff"/><ellipse cx="560" cy="138" rx="122" ry="46" fill="#fff"/><ellipse cx="632" cy="118" rx="82" ry="34" fill="#fff"/><ellipse cx="702" cy="146" rx="94" ry="38" fill="#fff"/></g>
+<circle cx="450" cy="375" r="148" fill="#75cfa2" opacity="0.25"/><circle cx="450" cy="375" r="110" fill="#75cfa2" opacity="0.18"/>
+<rect x="168" y="246" width="564" height="300" rx="42" fill="#ffffffcc"/>
+<text x="450" y="330" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#5f6f86">Serviços</text>
+<text x="450" y="400" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="58" font-weight="800" fill="#233449">Embalagem</text>
+<text x="450" y="468" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="58" font-weight="800" fill="#233449">Presente</text>
+<text x="450" y="525" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" fill="#5f6f86">Modelo demonstrativo LojaZapi</text>
+</svg>

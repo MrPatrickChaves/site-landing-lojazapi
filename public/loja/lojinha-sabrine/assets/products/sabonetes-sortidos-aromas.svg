@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Sabonetes sortidos</title>
+  <desc id="desc">Sabonetes artesanais sortidos em varios tons suaves.</desc>
+  <rect width="640" height="480" fill="#fffaf8"/>
+  <circle cx="130" cy="95" r="78" fill="#f8d9dc"/>
+  <circle cx="520" cy="120" r="88" fill="#ffe7b1"/>
+  <g transform="translate(126 142)">
+    <rect x="0" y="96" width="150" height="112" rx="46" fill="#f39ab1"/>
+    <rect x="130" y="48" width="160" height="122" rx="50" fill="#b7a5e9"/>
+    <rect x="282" y="105" width="150" height="112" rx="46" fill="#f3c663"/>
+    <rect x="75" y="190" width="170" height="114" rx="48" fill="#9bcf8f"/>
+    <rect x="238" y="202" width="150" height="104" rx="44" fill="#8cc7e7"/>
+  </g>
+  <text x="320" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7c273c">Aromas sortidos</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Kit caixa maracuja</title>
+  <desc id="desc">Caixa presente com produto artesanal de maracuja.</desc>
+  <rect width="640" height="480" fill="#fffaf8"/>
+  <circle cx="162" cy="102" r="82" fill="#ffe7b1"/>
+  <circle cx="502" cy="105" r="72" fill="#f8d9dc"/>
+  <rect x="158" y="168" width="324" height="210" rx="34" fill="#f3c663"/>
+  <path d="M158 228h324M320 168v210" stroke="#fff4d6" stroke-width="24"/>
+  <path d="M268 159c-57-69-124-27-80 27 35 42 96 20 132-18 36 38 97 60 132 18 44-54-23-96-80-27" fill="none" stroke="#b4485f" stroke-width="20" stroke-linecap="round"/>
+  <text x="320" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7c273c">Kit presente</text>
+</svg>

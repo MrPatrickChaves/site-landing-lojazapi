@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Kit banho maracuja</title>
+  <desc id="desc">Kit de banho artesanal com sabonetes e geleia.</desc>
+  <rect width="640" height="480" fill="#fff4f2"/>
+  <circle cx="518" cy="108" r="88" fill="#ffe7b1"/>
+  <g transform="translate(128 142)">
+    <rect x="42" y="128" width="168" height="116" rx="48" fill="#f5a8b6"/>
+    <rect x="230" y="78" width="116" height="166" rx="35" fill="#f6bd60"/>
+    <rect x="248" y="38" width="80" height="55" rx="18" fill="#7c273c"/>
+    <rect x="74" y="34" width="126" height="96" rx="40" fill="#9bcf8f"/>
+    <path d="M263 157h50M82 81h80M80 184h90" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <text x="320" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7c273c">Kit banho</text>
+</svg>

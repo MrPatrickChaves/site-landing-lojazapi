@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Sabonete artesanal rosa verde</title>
+  <desc id="desc">Ilustracao delicada de sabonete artesanal em tons de rosa e verde.</desc>
+  <rect width="640" height="480" fill="#fff4f2"/>
+  <circle cx="170" cy="120" r="90" fill="#f8d9dc"/>
+  <circle cx="505" cy="95" r="78" fill="#e9f5df"/>
+  <path d="M178 338c55-107 121-157 198-149 75 8 109 62 100 118-9 61-74 102-158 99-69-3-120-24-140-68Z" fill="#b4485f" opacity=".22"/>
+  <path d="M215 322c34-79 85-119 151-119 61 0 96 36 96 85 0 58-59 91-138 91-58 0-95-18-109-57Z" fill="#f5a8b6"/>
+  <path d="M280 246c24-49 62-67 105-53 38 13 54 47 40 78-18 42-72 55-117 34-29-13-40-33-28-59Z" fill="#fff1ed"/>
+  <path d="M405 235c51-16 95-5 132 32-43 24-88 27-135 8" fill="#94bf72"/>
+  <path d="M264 215c-44-15-80-4-108 31 40 20 79 20 118-2" fill="#6faa5f"/>
+  <text x="320" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7c273c">Sabonete artesanal</text>
+</svg>
