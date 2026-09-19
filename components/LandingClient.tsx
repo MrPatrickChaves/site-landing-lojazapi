@@ -63,6 +63,10 @@ export function LandingClient() {
           Falar com Patrick no WhatsApp
         </a>
       </div>
+      <a className="floating-whatsapp" data-whatsapp href="#" aria-label="Falar no WhatsApp">
+        <span>☏</span>
+        <strong>Falar no WhatsApp</strong>
+      </a>
       <ClientLinkData setModalOpen={setModalOpen} />
     </>
   );
