@@ -158,7 +158,7 @@ export default function Home() {
               </div>
 
               <div className="notebook-asset" aria-hidden="true">
-                <Image src="/landing-assets/notebook-header.png" width={520} height={413} alt="" priority />
+                <Image src="/landing-assets/notebook-header.png" width={369} height={326} alt="" priority />
               </div>
 
               <div className="hero-hand-note top">Do seu catálogo ao pedido no WhatsApp em poucos cliques!</div>

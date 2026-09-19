@@ -64,8 +64,7 @@ export function LandingClient() {
         </a>
       </div>
       <a className="floating-whatsapp" data-whatsapp href="#" aria-label="Falar no WhatsApp">
-        <span>☏</span>
-        <strong>Falar no WhatsApp</strong>
+        <img src="/landing-assets/whatsapp-mark.svg" alt="" aria-hidden="true" />
       </a>
       <ClientLinkData setModalOpen={setModalOpen} />
     </>
