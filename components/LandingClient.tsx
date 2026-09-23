@@ -6,10 +6,10 @@ const salesPhone = "5511940271034";
 const servicePhone = "5511940271034";
 
 const planMessages: Record<string, string> = {
-  setup: "Olá, Patrick! Quero contratar a criação da minha página LojaZapi por R$ 100,00.",
-  basico: "Olá, Patrick! Tenho interesse no Plano Básico da LojaZapi por R$ 9,90/mês.",
-  essencial: "Olá, Patrick! Tenho interesse no Plano Essencial da LojaZapi por R$ 14,90/mês.",
-  completo: "Olá, Patrick! Tenho interesse no Plano Completo da LojaZapi por R$ 19,90/mês.",
+  gratis: "Olá, Patrick! Quero começar grátis na LojaZapi com até 2 produtos.",
+  essencial: "Olá, Patrick! Tenho interesse no Plano Essencial da LojaZapi por R$ 9,90/mês, de 3 a 7 produtos.",
+  crescimento: "Olá, Patrick! Tenho interesse no Plano Crescimento da LojaZapi por R$ 14,99/mês, de 8 a 15 produtos.",
+  pro: "Olá, Patrick! Tenho interesse no Plano Pro da LojaZapi por R$ 23,99/mês, de 16 a 30 produtos.",
 };
 
 function waLink(phone: string, message: string) {

@@ -18,40 +18,60 @@ const steps = [
 
 const plans = [
   {
-    name: "Criação da página",
-    price: "R$ 100,00",
-    note: "pagamento único",
-    items: ["Página personalizada", "Layout profissional", "Configuração completa"],
-    action: "Quero minha página",
-    plan: "setup",
+    name: "Plano Grátis",
+    price: "R$ 0",
+    note: "/mês até 2 produtos",
+    items: [
+      "Loja online",
+      "Até 2 produtos cadastrados",
+      "Pedidos direto no WhatsApp",
+      "Todos os recursos básicos necessários para começar",
+    ],
+    action: "Comece grátis",
+    plan: "gratis",
     icon: "/landing-assets/icon-store.png",
   },
   {
-    name: "Plano Básico",
+    name: "Plano Essencial",
     price: "R$ 9,90",
-    note: "/mês até 5 produtos",
-    items: ["Todos os recursos principais", "Suporte por WhatsApp", "Ideal para começar"],
+    note: "/mês de 3 a 7 produtos",
+    items: [
+      "Todos os recursos principais",
+      "Pedidos pelo WhatsApp",
+      "Suporte",
+      "Ideal para pequenos negócios",
+    ],
     action: "Assinar agora",
-    plan: "basico",
+    plan: "essencial",
     icon: "/landing-assets/icon-box.png",
   },
   {
-    name: "Plano Essencial",
-    price: "R$ 14,90",
-    note: "/mês de 6 a 10 produtos",
-    items: ["Todos os recursos do Básico", "Mais produtos", "Relatórios simples"],
+    name: "Plano Crescimento",
+    price: "R$ 14,99",
+    note: "/mês de 8 a 15 produtos",
+    items: [
+      "Todos os recursos do Essencial",
+      "Mais produtos",
+      "Relatórios",
+      "Ideal para negócios em crescimento",
+    ],
     action: "Assinar agora",
-    plan: "essencial",
+    plan: "crescimento",
     popular: true,
     icon: "/landing-assets/icon-check.png",
   },
   {
-    name: "Plano Completo",
-    price: "R$ 19,90",
-    note: "/mês de 11 a 15 produtos",
-    items: ["Todos os recursos", "Mais controle e relatórios", "Suporte prioritário"],
+    name: "Plano Pro",
+    price: "R$ 23,99",
+    note: "/mês de 16 a 30 produtos",
+    items: [
+      "Todos os recursos",
+      "Mais controle e relatórios",
+      "Suporte prioritário",
+      "Ideal para quem possui um catálogo maior",
+    ],
     action: "Assinar agora",
-    plan: "completo",
+    plan: "pro",
     icon: "/landing-assets/icon-growth-square.png",
   },
 ];
@@ -202,7 +222,8 @@ export default function Home() {
 
         <section className="landing-section plans-section" id="planos">
           <div className="landing-shell">
-            <SectionHeading title="Planos" subtitle="Escolha o plano ideal para o seu negócio e comece a vender." />
+            <SectionHeading title="Planos" subtitle="Comece grátis e venda pelo WhatsApp. 30 dias grátis para testar. Sem cartão." />
+            <p className="plans-note">Grátis para até 2 produtos. Depois dos 30 dias, continue gratuitamente ou escolha um plano pago para cadastrar mais produtos.</p>
             <div className="plans-grid">
               {plans.map((plan) => (
                 <article className={`pricing-card${plan.popular ? " popular" : ""}`} key={plan.name}>

@@ -100,7 +100,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Sabonete Rosa Verde",
     category: "Sabonetes",
     price: 12,
-    image: "/loja/lojinha-sabrine/assets/products/sabonete-rosa-verde.svg",
+    image: "/loja/lojinha-sabrine/assets/products/sabonete-rosa-verde.png",
     description: "Sabonete artesanal em formato de rosa, delicado e ideal para presentes ou autocuidado.",
   },
   {
@@ -108,7 +108,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Sabonetes Sortidos",
     category: "Sabonetes",
     price: 15,
-    image: "/loja/lojinha-sabrine/assets/products/sabonetes-sortidos-aromas.svg",
+    image: "/loja/lojinha-sabrine/assets/products/sabonetes-sortidos-aromas.png",
     description: "Sabonetes artesanais em vários aromas, como algodão, mar e sal, capim-limão, melancia e outros.",
   },
   {
@@ -116,7 +116,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Sabonetes Sortidos TIPO X",
     category: "Sabonetes",
     price: 18,
-    image: "/loja/lojinha-sabrine/assets/products/sabonetes-sortidos-aromas.svg",
+    image: "/loja/lojinha-sabrine/assets/products/sabonetes-sortidos-typoX.png",
     description: "Sabonetes artesanais em vários aromas, como algodão, mar e sal, capim-limão, melancia e outros.",
   },
   {
@@ -124,7 +124,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Geleia para Banho Maracujá",
     category: "Geleias para banho",
     price: 18,
-    image: "/loja/lojinha-sabrine/assets/products/kit-geleias-sortidas.svg",
+    image: "/loja/lojinha-sabrine/assets/products/kit-geleias-sortidas.png",
     description: "Geleia para banho com brilho e fragrância de maracujá, perfeita para um banho especial.",
   },
   {
@@ -132,7 +132,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Geleia para Banho Pitaya",
     category: "Geleias para banho",
     price: 18,
-    image: "/loja/lojinha-sabrine/assets/products/kit-geleias-sortidas.svg",
+    image: "/loja/lojinha-sabrine/assets/products/kit-geleias-sortidas.png",
     description: "Geleia para banho com visual marcante e fragrância frutada de pitaya.",
   },
   {
@@ -140,7 +140,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Kit Geleias Sortidas",
     category: "Kits",
     price: 55,
-    image: "/loja/lojinha-sabrine/assets/products/kit-geleias-sortidas.svg",
+    image: "/loja/lojinha-sabrine/assets/products/kit-geleias-sortidas.png",
     description: "Kit com produtos variados, incluindo geleias para banho e sabonetes artesanais.",
   },
   {
@@ -148,7 +148,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Kit Caixa Maracujá",
     category: "Kits",
     price: 35,
-    image: "/loja/lojinha-sabrine/assets/products/kit-caixa-maracuja.svg",
+    image: "/loja/lojinha-sabrine/assets/products/kit-caixa-maracuja.png",
     description: "Kit presente com geleia de banho de maracujá e sabonete artesanal em embalagem especial.",
   },
   {
@@ -156,7 +156,7 @@ const sabrineProducts: StoreProduct[] = [
     name: "Kit Banho Maracujá",
     category: "Kits",
     price: 32,
-    image: "/loja/lojinha-sabrine/assets/products/kit-banho-maracuja.svg",
+    image: "/loja/lojinha-sabrine/assets/products/kit-banho-maracuja.png",
     description: "Kit com geleia de banho e sabonetes artesanais para um momento completo de cuidado.",
   },
 ];

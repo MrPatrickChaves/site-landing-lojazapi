@@ -170,6 +170,7 @@ export function StoreClient({ store }: { store: StoreTheme }) {
               <div>
                 <span className="store-eyebrow">Escolha livremente</span>
                 <h2>Produtos</h2>
+                <strong className="store-product-count">{store.products.length} produtos cadastrados</strong>
               </div>
               <p>Adicione quantos itens quiser. Seu carrinho fica salvo somente neste dispositivo.</p>
             </div>
