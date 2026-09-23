@@ -116,7 +116,7 @@ export function LandingClient() {
           <label>Email<input name="email" type="email" required placeholder="voce@email.com" /></label>
           <label>WhatsApp<input name="whatsapp" type="tel" required placeholder="(11) 99999-9999" /></label>
           <label>Senha<input name="password" type="password" required minLength={6} placeholder="Mínimo 6 caracteres" /></label>
-          <button className="btn btn-primary" type="submit" disabled={loading}>{loading ? "Enviando..." : "Continuar e abrir WhatsApp"}</button>
+          <button className="btn btn-primary" type="submit" disabled={loading}>{loading ? "Enviando..." : "Continuar"}</button>
         </form>
         {signupMessage ? <p className="signup-feedback">{signupMessage}</p> : null}
       </div>
