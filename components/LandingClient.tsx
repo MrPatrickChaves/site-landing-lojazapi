@@ -24,6 +24,7 @@ export function LandingClient() {
   const [signupMessage, setSignupMessage] = useState("");
   const [signupStep, setSignupStep] = useState<"form" | "code" | "done">("form");
   const [signupEmail, setSignupEmail] = useState("");
+  const [signupWhatsappUrl, setSignupWhatsappUrl] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -59,9 +60,10 @@ export function LandingClient() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Não foi possível concluir o cadastro.");
       setSignupEmail(email);
+      setSignupWhatsappUrl("");
       setSignupStep("code");
+      setSignupOpen(true);
       setSignupMessage("Enviamos um código para o seu email. Digite o código abaixo para confirmar seu cadastro.");
-      if (data.whatsappUrl) window.open(data.whatsappUrl, "_blank", "noopener");
     } catch (error) {
       setSignupMessage(error instanceof Error ? error.message : "Erro ao enviar cadastro.");
     } finally {
@@ -83,8 +85,11 @@ export function LandingClient() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Não foi possível confirmar o código.");
+      const whatsappUrl = data.whatsappUrl || "";
+      setSignupWhatsappUrl(whatsappUrl);
       setSignupStep("done");
       setSignupMessage("Email confirmado. Em alguns instantes você receberá um email com seus dados de acesso ao painel administrativo.");
+      if (whatsappUrl) window.open(whatsappUrl, "_blank", "noopener");
     } catch (error) {
       setSignupMessage(error instanceof Error ? error.message : "Erro ao confirmar código.");
     } finally {
@@ -138,7 +143,7 @@ export function LandingClient() {
           <>
             <h3>Comece sua loja agora</h3>
             <p>
-              Preencha seus dados. Vamos salvar seu cadastro, abrir a mensagem no WhatsApp e enviar um código para confirmar seu email.
+              Preencha seus dados para receber o código no email. O cadastro final e o WhatsApp só continuam depois da confirmação.
             </p>
             <form className="plan-signup-form" onSubmit={submitPlan}>
               <label>Nome<input name="name" type="text" required placeholder="Seu nome" /></label>
@@ -163,6 +168,7 @@ export function LandingClient() {
           <>
             <h3>Email confirmado</h3>
             <p className="signup-done-text">Em alguns instantes você receberá um email com seus dados de acesso ao painel administrativo.</p>
+            {signupWhatsappUrl ? <a className="btn btn-secondary" href={signupWhatsappUrl} target="_blank" rel="noopener">Abrir WhatsApp</a> : null}
             <a className="btn btn-primary" href="/sistema/">Ir para o painel</a>
           </>
         ) : null}
@@ -178,6 +184,7 @@ export function LandingClient() {
           setSelectedPlan(plan);
           setSignupMessage("");
           setSignupEmail("");
+          setSignupWhatsappUrl("");
           setSignupStep("form");
           setSignupOpen(true);
         }}
