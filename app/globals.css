@@ -1096,3 +1096,4 @@ button { cursor: pointer; }
 .plan-signup-form button { width: 100%; border: 0; }
 .signup-feedback { margin: 14px 0 0; padding: 12px 14px; border-radius: 14px; color: #087847; background: #effdf5; font-weight: 800; }
 @media (max-width: 640px) { .plan-signup-modal { width: calc(100% - 28px); } }
+.signup-done-text { margin: 12px 0 18px; color: #516383; }

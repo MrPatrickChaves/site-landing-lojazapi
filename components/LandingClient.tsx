@@ -22,6 +22,8 @@ export function LandingClient() {
   const [signupOpen, setSignupOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("gratis");
   const [signupMessage, setSignupMessage] = useState("");
+  const [signupStep, setSignupStep] = useState<"form" | "code" | "done">("form");
+  const [signupEmail, setSignupEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -39,6 +41,7 @@ export function LandingClient() {
   async function submitPlan(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
+    const email = String(form.get("email") || "").trim().toLowerCase();
     setLoading(true);
     setSignupMessage("Enviando cadastro...");
     try {
@@ -55,10 +58,35 @@ export function LandingClient() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Não foi possível concluir o cadastro.");
-      setSignupMessage(data.message || "Cadastro recebido. Confira seu email para confirmar o código.");
+      setSignupEmail(email);
+      setSignupStep("code");
+      setSignupMessage("Enviamos um código para o seu email. Digite o código abaixo para confirmar seu cadastro.");
       if (data.whatsappUrl) window.open(data.whatsappUrl, "_blank", "noopener");
     } catch (error) {
       setSignupMessage(error instanceof Error ? error.message : "Erro ao enviar cadastro.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+
+  async function submitCode(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    setLoading(true);
+    setSignupMessage("Confirmando código...");
+    try {
+      const response = await fetch(`${apiUrl}/auth/verify-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: signupEmail, code: form.get("code") }),
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message || "Não foi possível confirmar o código.");
+      setSignupStep("done");
+      setSignupMessage("Email confirmado. Em alguns instantes você receberá um email com seus dados de acesso ao painel administrativo.");
+    } catch (error) {
+      setSignupMessage(error instanceof Error ? error.message : "Erro ao confirmar código.");
     } finally {
       setLoading(false);
     }
@@ -106,18 +134,38 @@ export function LandingClient() {
       <div className={`modal plan-signup-modal${signupOpen ? " show" : ""}`} aria-hidden={!signupOpen}>
         <button className="modal-close" aria-label="Fechar" type="button" onClick={() => setSignupOpen(false)}>×</button>
         <span className="modal-kicker">{planNames[selectedPlan] || "Plano LojaZapi"}</span>
-        <h3>Comece sua loja agora</h3>
-        <p>
-          Preencha seus dados. Vamos salvar seu cadastro, abrir a mensagem no WhatsApp e enviar um código para confirmar seu email.
-          Depois da confirmação, você recebe os dados de acesso ao painel administrativo.
-        </p>
-        <form className="plan-signup-form" onSubmit={submitPlan}>
-          <label>Nome<input name="name" type="text" required placeholder="Seu nome" /></label>
-          <label>Email<input name="email" type="email" required placeholder="voce@email.com" /></label>
-          <label>WhatsApp<input name="whatsapp" type="tel" required placeholder="(11) 99999-9999" /></label>
-          <label>Senha<input name="password" type="password" required minLength={6} placeholder="Mínimo 6 caracteres" /></label>
-          <button className="btn btn-primary" type="submit" disabled={loading}>{loading ? "Enviando..." : "Continuar"}</button>
-        </form>
+        {signupStep === "form" ? (
+          <>
+            <h3>Comece sua loja agora</h3>
+            <p>
+              Preencha seus dados. Vamos salvar seu cadastro, abrir a mensagem no WhatsApp e enviar um código para confirmar seu email.
+            </p>
+            <form className="plan-signup-form" onSubmit={submitPlan}>
+              <label>Nome<input name="name" type="text" required placeholder="Seu nome" /></label>
+              <label>Email<input name="email" type="email" required placeholder="voce@email.com" /></label>
+              <label>WhatsApp<input name="whatsapp" type="tel" required placeholder="(11) 99999-9999" /></label>
+              <label>Senha<input name="password" type="password" required minLength={6} placeholder="Mínimo 6 caracteres" /></label>
+              <button className="btn btn-primary" type="submit" disabled={loading}>{loading ? "Enviando..." : "Continuar"}</button>
+            </form>
+          </>
+        ) : null}
+        {signupStep === "code" ? (
+          <>
+            <h3>Confirme seu email</h3>
+            <p>Digite o código enviado para <strong>{signupEmail}</strong>. Somente depois dessa confirmação seus dados de acesso serão enviados.</p>
+            <form className="plan-signup-form" onSubmit={submitCode}>
+              <label>Código de confirmação<input name="code" inputMode="numeric" required placeholder="000000" /></label>
+              <button className="btn btn-primary" type="submit" disabled={loading}>{loading ? "Confirmando..." : "Confirmar código"}</button>
+            </form>
+          </>
+        ) : null}
+        {signupStep === "done" ? (
+          <>
+            <h3>Email confirmado</h3>
+            <p className="signup-done-text">Em alguns instantes você receberá um email com seus dados de acesso ao painel administrativo.</p>
+            <a className="btn btn-primary" href="/sistema/">Ir para o painel</a>
+          </>
+        ) : null}
         {signupMessage ? <p className="signup-feedback">{signupMessage}</p> : null}
       </div>
 
@@ -129,6 +177,8 @@ export function LandingClient() {
         openSignup={(plan) => {
           setSelectedPlan(plan);
           setSignupMessage("");
+          setSignupEmail("");
+          setSignupStep("form");
           setSignupOpen(true);
         }}
       />
