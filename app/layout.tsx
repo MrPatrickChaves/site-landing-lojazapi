@@ -15,7 +15,7 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const siteUrl = "https://lojazapi.flexyweb.com.br";
+const siteUrl = "https://lojazapi.online";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

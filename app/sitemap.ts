@@ -3,7 +3,7 @@ import { modelStores } from "../lib/store-data";
 
 export const dynamic = "force-static";
 
-const baseUrl = "https://lojazapi.flexyweb.com.br";
+const baseUrl = "https://lojazapi.online";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

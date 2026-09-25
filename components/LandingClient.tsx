@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useState } from "react";
 
 const salesPhone = "5511940271034";
 const servicePhone = "5511940271034";
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://lojazapi.flexyweb.com.br/api";
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://back.lojazapi.online/api";
 
 const planNames: Record<string, string> = {
   gratis: "Plano Grátis",
